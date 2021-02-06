@@ -1,4 +1,4 @@
-import { Config } from '@stencil/core';
+import { Config, TestingConfig } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'headlessui-webcomponents',
@@ -18,4 +18,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  testing: {
+    modulePathIgnorePatterns: ['<rootDir>/dist/'],
+  },
 };
