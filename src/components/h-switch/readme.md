@@ -81,9 +81,8 @@ module.exports = vueConfig;
 // main.js
 import { defineCustomElements } from 'headlessui-webcomponents/dist/esm/loader';
 
-if (process.env.NODE_ENV !== 'production') {
-  makeMirageServer();
-}
+// Bind the custom elements to the window object
+defineCustomElements();
 ```
 
 ```vue
