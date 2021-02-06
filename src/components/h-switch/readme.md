@@ -58,11 +58,23 @@ Vue.js needs to be configured to recognize custom elements
 
 <details><summary>Click to show code</summary>
 
-```vue.config.js
-const vueConfig = {}; vueConfig.chainWebpack = config => { config.module
-.rule("vue") .use("vue-loader") .loader("vue-loader") .tap(options => {
-options.compilerOptions = { ...(options.compilerOptions || {}), isCustomElement:
-tag => /^h-/.test(tag), }; return options; }); }; module.exports = vueConfig;
+```js
+// vue.config.js
+const vueConfig = {};
+vueConfig.chainWebpack = config => {
+  config.module
+    .rule('vue')
+    .use('vue-loader')
+    .loader('vue-loader')
+    .tap(options => {
+      options.compilerOptions = {
+        ...(options.compilerOptions || {}),
+        isCustomElement: tag => /^h-/.test(tag),
+      };
+      return options;
+    });
+};
+module.exports = vueConfig;
 ```
 
 ```js
