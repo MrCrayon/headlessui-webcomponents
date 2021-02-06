@@ -23,7 +23,7 @@ npm run build
 
 ## Using components
 
-[Switch](tree/master/src/components/h-switch)
+[Switch](src/components/h-switch)
 
 ## About Stencil
 
