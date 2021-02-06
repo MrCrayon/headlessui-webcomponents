@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HSwitch } from '../h-switch';
+import { HSwitch } from './h-switch';
 
 describe('h-switch', () => {
   it('renders', async () => {
